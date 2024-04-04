@@ -12,10 +12,9 @@ if (isset($_GET['page'])){
                 $personnageController->listPersonnage();
                 break;
             case 'download':
-                $nom=$_GET['name'];
-                $description=$_GET['description'];
+                $id=$_GET['id'];
                 $personnageController = new PersonnageController();
-                $personnageController->download($nom,$description);
+                $personnageController->download($id);
                 
                 break;
             }}
